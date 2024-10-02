@@ -1,0 +1,71 @@
+/* Селектор за тегом */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Селектор за ідентифікатором (#header) */
+#header {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Селектор за класом (.content) */
+.content {
+    background-color: silver;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Комбінований селектор за класом і тегом (.content p.highlight) */
+.content p.highlight {
+    background-color: coral;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Селектор атрибута (блок з атрибутом data-color) */
+[data-color="blue"] {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+/* Селектор класу (.box) */
+.box {
+    background-color: brown;
+    padding: 15px;
+    margin: 20px;
+    font-size: 18px;
+}
+
+/* Селектор дочірніх елементів (.container > .item) */
+.container > .item {
+    background-color: greenyellow
+    color: red;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Селектор сусідів (~) — вибирає всі наступні елементи "p" після "h2" */
+h2 ~ .item {
+    border: 2px solid green;
+    padding: 10px;
+}
+
+/* Селектор за тегом (footer) */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
