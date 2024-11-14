@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комбіновані ефекти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #8b858a, #6f1186);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6); 
+            margin-bottom: 30px;
+        }
+
+        .text-block {
+            background: linear-gradient(to right, #8e2de2, #4a00e0); 
+            padding: 20px;
+            color: white;
+            font-size: 1.5em;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .animated-box {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #7a7483, #581d88);
+            animation: gradient-animation 3s infinite alternate;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
+            margin-bottom: 30px;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            }
+            100% {
+                background: linear-gradient(45deg, #42a1f5, #ffd700);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Комбіновані ефекти</h1>
+
+    <img src="https://cdn.pixabay.com/photo/2023/04/10/15/56/bowl-7914112_640.jpg" alt="Картинка з тінню">
+
+    <div class="text-block">
+        Текстовий блок з градієнтом на фоні та тінню.
+    </div>
+
+    <div class="animated-box"></div>
+</body>
+</html>
