@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трансформації елементів</title>
+    <style>
+        .element {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: lightblue;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .scale {
+            transform: scale(2);
+        }
+
+        .rotate {
+            transform: rotate(-45deg);
+        }
+
+        .translate {
+            transform: translate(100px, 50px);
+        }
+
+        .skew {
+            transform: skew(20deg, 30deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="element scale">Scale</div>
+    <div class="element rotate">Rotate</div>
+    <div class="element translate">Translate</div>
+    <div class="element skew">Skew</div>
+
+</body>
+</html>
