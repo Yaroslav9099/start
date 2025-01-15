@@ -1,0 +1,23 @@
+<div class="resize">Змінюємо розмір</div>
+
+<style>
+.resize {
+    font-size: 24px;
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: inline-block;
+    animation: resizeElement 4s infinite alternate;
+}
+
+@keyframes resizeElement {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+    to {
+        width: 200px;
+        height: 200px;
+    }
+}
+</style>
