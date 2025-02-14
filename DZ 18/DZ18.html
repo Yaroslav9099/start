@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центровані блоки з фільтрами</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .block {
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(241, 142, 142);
+            box-shadow: 0 4px 8px rgba(122, 209, 180, 0.1);
+            transition: all 0.5s ease;
+        }
+        .block img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .block:nth-child(1) {
+            filter: blur(2px) opacity(0.8) grayscale(50%);
+        }
+        .block:nth-child(1):hover {
+            filter: blur(0) opacity(1) grayscale(0);
+        }
+        .block:nth-child(2) {
+            filter: contrast(150%) brightness(90%) hue-rotate(30deg);
+        }
+        .block:nth-child(2):hover {
+            filter: contrast(100%) brightness(100%) hue-rotate(0deg);
+        }
+        .block:nth-child(3) {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            backdrop-filter: blur(5px) brightness(80%) saturate(120%);
+        }
+        .block:nth-child(3) div {
+            width: 50%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(3px);
+        }
+        .block:nth-child(3):hover {
+            backdrop-filter: blur(0) brightness(100%) saturate(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <img src="https://www.forestprotection.com/images/orman-cesitleri.jpg" alt="Зображення">
+    </div>
+    <div class="block">
+        <p>Це приклад тексту у другому блоці.</p>
+    </div>
+    <div class="block">
+        <div>Третій блок</div>
+    </div>
+</body>
+</html>
