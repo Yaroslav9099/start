@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Анімації</title>
+    <style>
+        @keyframes textColorChange {
+            from { color: black; }
+            to { color: red; }
+        }
+        .animate-text {
+            animation: textColorChange 3s linear infinite alternate;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .animate-fade {
+            animation: fadeOut 2s linear infinite alternate;
+        }
+
+        @keyframes rotateElement {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-rotate {
+            animation: rotateElement 5s linear infinite;
+        }
+
+        @keyframes resizeElement {
+            from { width: 100px; height: 100px; }
+            to { width: 200px; height: 200px; }
+        }
+        .animate-resize {
+            animation: resizeElement 4s linear infinite alternate;
+        }
+
+        @keyframes moveElement {
+            from { transform: translateX(0); }
+            to { transform: translateX(80vw); }
+        }
+        .animate-move {
+            animation: moveElement 6s linear infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="block animate-text">Зміна кольору</div>
+    <div class="block animate-fade">Зникнення елемента</div>
+    <div class="block animate-rotate">Обертання</div>
+    <div class="block animate-resize">Зміна розміру</div>
+    <div class="block animate-move">Рух зліва направо</div>
+</body>
+</html>
