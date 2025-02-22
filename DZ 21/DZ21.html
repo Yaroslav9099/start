@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Позиционирование и Float</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container-position {
+            margin: 20px;
+            position: relative;
+            height: 500px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .static {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: yellow;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: orange;
+            padding: 10px;
+        }
+
+        .container-float {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 10px;
+            overflow: hidden; 
+        }
+        .left {
+            width: 40%;
+            float: left;
+            background-color: lightblue;
+            padding: 20px;
+        }
+        .right {
+            width: 50%;
+            float: right;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .container-clearfix {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Позиционирование элементов</h2>
+    <div class="sticky">Sticky Header (Прилипает при прокрутке)</div>
+    <div class="container-position">
+        <div class="static">Static (Стандартное поведение)</div>
+        <div class="relative">Relative (Смещен относительно себя)</div>
+        <div class="absolute">Absolute (Относительно контейнера)</div>
+    </div>
+    <div class="fixed">Fixed (Закреплен в углу экрана)</div>
+
+    <h2>2. Макет с Float</h2>
+    <div class="container-float">
+        <div class="left">Левый блок (float: left)</div>
+        <div class="right">Правый блок (float: right)</div>
+    </div>
+
+    <h2>3. Fix Float с Clearfix</h2>
+    <div class="container-clearfix clearfix">
+        <div class="left">Левый блок (float: left)</div>
+        <div class="right">Правый блок (float: right)</div>
+    </div>
+
+    <p style="height: 1000px;">Прокрутите страницу вниз, чтобы увидеть эффекты sticky и fixed.</p>
+
+</body>
+</html>
