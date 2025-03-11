@@ -1,0 +1,90 @@
+/* Загальні стилі для сторінки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Сітка для контейнера */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1/4 для бокової панелі, 3/4 для основного контенту */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Лівий блок (бокова панель) */
+.sidebar {
+    background-color: #cce7ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Правий блок (основний контент та додатковий контент) */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Розміщення блоків один під одним */
+}
+
+.content {
+    background-color: #e6ffcc;
+    padding: 20px;
+    border-radius: 8px;
+    /* Можемо задать фиксированную высоту или гибкую */
+    height: 200px; /* Высота блока .content */
+}
+
+.extra {
+    background-color: #ffccff;
+    padding: 20px;
+    border-radius: 8px;
+    /* Задаем большую высоту для блока .extra */
+    height: 300px; /* Высота блока .extra больше, чем у .content */
+}
+
+/* Респонсивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Одна колонка для всього контенту */
+    }
+
+    .sidebar, .content, .extra {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 0.5rem;
+    }
+
+    .grid-container {
+        grid-gap: 15px;
+    }
+
+    .sidebar, .content, .extra {
+        font-size: 14px;
+    }
+}
