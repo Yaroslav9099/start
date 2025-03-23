@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    color: #333;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .article, .image {
+    margin-bottom: 20px;
+  }
+  
+  .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .article {
+      width: 48%;
+    }
+    
+    .image {
+      width: 48%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .article {
+      width: 60%;
+    }
+    
+    .image {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    header {
+      text-align: left;
+      padding: 10px;
+    }
+    
+    nav ul {
+      display: block;
+      text-align: left;
+    }
+    
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .content {
+      display: block;
+    }
+  
+    .image img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  @media (orientation: portrait) {
+    body {
+      background-color: lightyellow;
+    }
+  
+    .content {
+      text-align: center;
+    }
+  
+    .article {
+      width: 100%;
+    }
+  
+    .image {
+      width: 100%;
+    }
+  }
+  
+  @media (orientation: landscape) {
+    body {
+      background-color: lightblue;
+    }
+  
+    .content {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .article {
+      width: 48%;
+    }
+  
+    .image {
+      width: 48%;
+    }
+  }
+  
