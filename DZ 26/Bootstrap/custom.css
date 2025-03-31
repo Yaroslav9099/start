@@ -1,0 +1,18 @@
+:root {
+    --bs-primary: #ff5733;
+    --bs-secondary: #333333; 
+    --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+.btn-custom {
+    background-color: var(--bs-primary);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #cc4629;
+    box-shadow: 0 5px 15px rgba(255, 87, 51, 0.3);
+}
