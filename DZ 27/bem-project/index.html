@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой BEM-сайт</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">BEM Страница</h1>
+      <nav class="header__nav">
+        <a href="#" class="header__link header__link--active">Главная</a>
+        <a href="#" class="header__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="card-list">
+      <article class="card card--highlighted">
+        <img src="img/1.jpeg" alt="Зображення" class="card__image" />
+        <h2 class="card__title">Название карточки</h2>
+        <p class="card__text">Описание елемента. Это пример контента в карточке.</p>
+        <button class="card__button">Подробнее</button>
+      </article>
+
+      <article class="card">
+        <h2 class="card__title">Другая карточка</h2>
+        <p class="card__text">Еще один пример без изображения.</p>
+        <button class="card__button">Читать</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 BEM-проект</p>
+  </footer>
+
+</body>
+</html>
