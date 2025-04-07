@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оптимизация изображений</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Оптимизованые изображения</h1>
+
+  <section>
+    <h2>Фото (JPG/WebP)</h2>
+    <picture>
+      <source srcset="images/photo.webp" type="image/webp">
+      <img src="images/photo.jpg" alt="Фото" class="responsive-img">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Логотип (PNG Retina/WebP)</h2>
+    <picture>
+      <source srcset="images/logo.webp" type="image/webp">
+      <img 
+        src="images/logo.png" 
+        srcset="images/logo@2x.png 2x" 
+        alt="Логотип" 
+        class="responsive-img retina-img"
+        width="400" height="300">
+    </picture>
+  </section>
+
+  <section>
+    <h2>Іконка (SVG)</h2>
+    <img src="images/icon.svg" alt="Іконка" width="100" height="100">
+  </section>
+
+</body>
+</html>

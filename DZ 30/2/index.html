@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Масштабування</title>
+  <style>
+    .icon {
+      width: 100px;
+      height: 100px;
+      transition: transform 0.3s;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+    }
+
+    /* Адаптивно */
+    .responsive-icon {
+      width: 20vw;
+      height: auto;
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Приклад SVG з масштабуванням</h1>
+
+  <!-- Вбудоване SVG -->
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="12" y1="8" x2="12" y2="12" />
+    <line x1="12" y1="16" x2="12" y2="16" />
+  </svg>
+
+  <!-- Адаптивна іконка -->
+  <svg class="responsive-icon" viewBox="0 0 24 24" fill="none" stroke="royalblue" stroke-width="2">
+    <path d="M5 12h14M12 5l7 7-7 7"/>
+  </svg>
+
+</body>
+</html>

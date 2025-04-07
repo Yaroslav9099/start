@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+  }
+  
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .retina-img {
+      image-rendering: auto;
+    }
+  }
+  
