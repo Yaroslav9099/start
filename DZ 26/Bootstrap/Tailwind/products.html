@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Продукти — МійСайт</title>
+  <meta name="description" content="Перегляньте наші якісні продукти за вигідними цінами.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#facc15',
+            accent: '#10b981'
+          },
+          fontFamily: {
+            sans: ['"Segoe UI"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Навігація -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-primary">МійСайт</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-primary hover:underline">Головна</a></li>
+        <li><a href="products.html" class="text-primary font-semibold underline">Продукти</a></li>
+        <li><a href="contact.html" class="text-primary hover:underline">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Контент -->
+  <main class="container mx-auto px-4 py-10">
+    <h2 class="text-3xl font-bold mb-6 text-center">Наші продукти</h2>
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Продукт -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="img/1.jpeg" alt="Сир" class="rounded mb-4 w-full object-cover">
+        <h3 class="text-xl font-bold mb-2">Сир</h3>
+        <p class="text-gray-600 mb-4">Натуральний продукт.</p>
+        <span class="text-primary font-semibold">₴500</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="img/2.jpeg" alt="Хліб" class="rounded mb-4 w-full object-cover">
+        <h3 class="text-xl font-bold mb-2">Хліб</h3>
+        <p class="text-gray-600 mb-4">Натуральний продукт.</p>
+        <span class="text-primary font-semibold">₴200</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <img src="img/3.jpeg" alt="Ковбаса" class="rounded mb-4 w-full object-cover">
+        <h3 class="text-xl font-bold mb-2">Ковбаса</h3>
+        <p class="text-gray-600 mb-4">Натуральний продукт.</p>
+        <span class="text-primary font-semibold">₴900</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 МійСайт. Всі права захищено.</p>
+  </footer>
+</body>
+</html>

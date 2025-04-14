@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мій Tailwind CSS Вебсайт</title>
+  <meta name="description" content="Сайт з використанням Tailwind CSS для демонстрації продуктів.">
+  <meta property="og:title" content="Мій Tailwind CSS Вебсайт">
+  <meta property="og:description" content="Головна сторінка нашого сайту, створеного з Tailwind CSS.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#facc15',
+            accent: '#10b981'
+          },
+          fontFamily: {
+            sans: ['"Segoe UI"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Навігація -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-primary">МійСайт</h1>
+
+      <!-- Мобільне меню кнопка -->
+      <button id="menu-toggle" class="md:hidden text-primary text-2xl">
+        ☰
+      </button>
+
+      <!-- Меню -->
+      <ul id="menu" class="hidden md:flex space-x-6 flex-col md:flex-row absolute md:static bg-white md:bg-transparent left-0 right-0 top-16 md:top-0 px-4 md:px-0 py-4 md:py-0 shadow md:shadow-none">
+        <li><a href="index.html" class="text-primary font-semibold underline">Головна</a></li>
+        <li><a href="products.html" class="text-primary hover:underline">Продукти</a></li>
+        <li><a href="contact.html" class="text-primary hover:underline">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Головна секція -->
+  <header class="bg-secondary py-20 text-center text-gray-900">
+    <h2 class="text-4xl font-semibold mb-4">Ласкаво просимо!</h2>
+    <p class="text-lg">Це головна сторінка нашого сайту, створеного з Tailwind CSS</p>
+    <a href="products.html" class="mt-6 inline-block px-6 py-3 bg-primary text-white rounded-lg shadow hover:bg-blue-700 transition">Переглянути продукти</a>
+  </header>
+
+  <!-- Контент -->
+  <main class="container mx-auto px-4 py-10">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Якість -->
+      <div class="bg-white p-6 rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+        <div class="flex items-center mb-2">
+          <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          <h3 class="text-xl font-bold text-accent">Якість</h3>
+        </div>
+        <p>Наші продукти відповідають найвищим стандартам якості.</p>
+      </div>
+
+      <!-- Ціни -->
+      <div class="bg-white p-6 rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+        <div class="flex items-center mb-2">
+          <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.1 0-2 .9-2 2s.9 2 2 2m0-6v2m0 6v2m-6 4h12c1.1 0 2-.9 2-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12c0 1.1.9 2 2 2z"/></svg>
+          <h3 class="text-xl font-bold text-accent">Ціни</h3>
+        </div>
+        <p>Ми пропонуємо конкурентні ціни для наших клієнтів.</p>
+      </div>
+
+      <!-- Підтримка -->
+      <div class="bg-white p-6 rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+        <div class="flex items-center mb-2">
+          <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 10c0-3.31-2.69-6-6-6S6 6.69 6 10c0 2.29 1.29 4.29 3.17 5.37L9 20l3-1 3 1-.17-4.63C16.71 14.29 18 12.29 18 10z"/></svg>
+          <h3 class="text-xl font-bold text-accent">Підтримка</h3>
+        </div>
+        <p>Зв’яжіться з нами в будь-який час для отримання допомоги.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 МійСайт. Всі права захищено.</p>
+  </footer>
+
+  <!-- Скрипт для мобільного меню -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
