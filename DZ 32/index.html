@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация на Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+    // Получаем доступ к элементу canvas и его контексту для рисования
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Начальные параметры круга
+    let circle = {
+        x: 50,
+        y: 50,
+        radius: 30,
+        color: 'blue',
+        dx: 2, // Скорость движения по оси X
+        dy: 2  // Скорость движения по оси Y
+    };
+
+    // Функция для рисования круга
+    function drawCircle() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);  // Очищаем canvas
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+        ctx.fillStyle = circle.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    // Функция для анимации
+    function animateCircle() {
+        drawCircle();
+
+        // Обновляем позицию круга
+        circle.x += circle.dx;
+        circle.y += circle.dy;
+
+        // Проверка на столкновение с краями canvas и изменение направления движения
+        if (circle.x + circle.radius > canvas.width || circle.x - circle.radius < 0) {
+            circle.dx = -circle.dx; // Меняем направление по оси X
+        }
+        if (circle.y + circle.radius > canvas.height || circle.y - circle.radius < 0) {
+            circle.dy = -circle.dy; // Меняем направление по оси Y
+        }
+
+        // Вызываем функцию повторно для создания анимации
+        requestAnimationFrame(animateCircle);
+    }
+
+    // Запускаем анимацию
+    animateCircle();
+
+    // Обработчик события для нажатия клавиши
+    document.addEventListener('keydown', function(event) {
+        if (event.key === ' ') { // Если нажата пробел, изменяем цвет круга
+            circle.color = circle.color === 'blue' ? 'red' : 'blue'; // Переключаем между синим и красным
+        }
+    });
+</script>
+
+</body>
+</html>
